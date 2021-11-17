@@ -4,8 +4,8 @@
       "host": "localhost",
       "database": "store_backend",
       "user": "postgres",
-      "password": "myPassword",
-      "port": "5430"
+      "password": "helloworld",
+      "port": "5432"
     },
     "test": {
       "driver": "pg",
@@ -13,6 +13,14 @@
       "database": "store_backend_test",
       "user": "owner_user",
       "password": "helloworld",
-      "port": "5430"
-    }
+      "port": "5432"
+    },
+    "pg": {
+      "driver": "pg",
+      "host": "localhost",
+      "database": "store_backend",
+      "user": "postgres",
+      "password": "helloworld",
+      "port": "5432"
+      }
   }
