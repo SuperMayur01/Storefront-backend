@@ -14,6 +14,8 @@ build - npm run build
 # Create .env file with following info:
 POSTGRES_HOST=localhost
 POSTGRES_DB=store_backend
+POSTGRES_DB_TEST=store_backend_test
+ENV=dev
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=helloworld
 BCRYPT_PASSWORD=your-secret-password

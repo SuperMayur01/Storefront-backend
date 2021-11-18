@@ -32,8 +32,7 @@ describe('test endpoint GET /orders/:id', () => {
       .set(
         'Authorization', `Bearer ${token}`
         );
-console.log(responseOrder.body);
-
+        
       expect(responseOrder.body.status).toBe('active');
       expect(responseOrder.status).toBe(200);
     });

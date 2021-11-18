@@ -11,7 +11,7 @@
       "driver": "pg",
       "host": "localhost",
       "database": "store_backend_test",
-      "user": "owner_user",
+      "user": "postgres",
       "password": "helloworld",
       "port": "5432"
     },
