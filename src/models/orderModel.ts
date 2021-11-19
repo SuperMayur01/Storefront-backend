@@ -3,7 +3,7 @@ import client from '../database';
 
 export type Order = {
     id?: number;
-    user_id: string;
+    user_id: number;
     status?: string;
 }
 
@@ -15,7 +15,7 @@ export type Order_products = {
 }
 
 export class OrderStore {
-  async show(id:number): Promise<Order[]> {
+  async show(id:number): Promise<Order> {
     try {
       const conn = await client.connect()
       const sql: string = 'SELECT * FROM orders JOIN order_products ON orders.id=order_products.order_id WHERE user_id=($1)' 
@@ -24,14 +24,14 @@ export class OrderStore {
   
       conn.release()
   
-      return result.rows 
+      return result.rows[0]
     } catch (err) {
       throw new Error(`Could not get orders. Error: ${err}`)
     }
   }
 
 
-  async create(order: {user_id:number, quantity:number, order_id: number, product_id: number}): Promise<Object> {
+  async create(order: {user_id:number, quantity:number, order_id: number, product_id: number}): Promise<{id?: number; user_id: number; status?: string; quantity:number; order_id: number; product_id: number}> {
     try {
         const sql1: string = 'INSERT INTO orders (user_id) VALUES($1) RETURNING *';
         

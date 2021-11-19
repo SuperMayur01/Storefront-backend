@@ -10,6 +10,8 @@ Commands to run:
 start - npm run start
 test - npm run test
 build - npm run build
+migrate-up - npm run migrate-up
+migrate-down - npm run migrate-down
 
 # Create .env file with following info:
 POSTGRES_HOST=localhost
@@ -31,6 +33,7 @@ docker exec -it myBack bash
 su postgres
 psql
 CREATE DATABASE store_backend;
+CREATE DATABASE store_backend_test;
 \c store_backend;
 
 *Make sure docker container is running*

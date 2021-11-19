@@ -1,18 +1,18 @@
 {
     "dev": {
       "driver": "pg",
-      "host": "localhost",
-      "database": "store_backend",
-      "user": "postgres",
-      "password": "helloworld",
+      "host": {"ENV":"POSTGRES_HOST"},
+      "database": {"ENV":"POSTGRES_DB"},
+      "user": {"ENV":"POSTGRES_USER"},
+      "password": {"ENV":"POSTGRES_PASSWORD"},
       "port": "5432"
     },
     "test": {
       "driver": "pg",
-      "host": "localhost",
-      "database": "store_backend_test",
-      "user": "postgres",
-      "password": "helloworld",
+      "host": {"ENV":"POSTGRES_HOST"},
+      "database": {"ENV":"POSTGRES_DB_TEST"},
+      "user": {"ENV":"POSTGRES_USER"},
+      "password": {"ENV":"POSTGRES_PASSWORD"},
       "port": "5432"
     },
     "pg": {
